@@ -1,4 +1,5 @@
 version: '2'
+
 services:
   redis:
     image: 'redis:latest'
@@ -8,6 +9,8 @@ services:
   shell:
     image: 'python:2.7.15'
     hostname: 'PYSHELL'
+    volumes:
+      - ${PWD}/shellscript:/opt/shellscript
     command: 'sleep infinity'
   mssql:
     image: 'microsoft/mssql-server-linux:2017-latest'

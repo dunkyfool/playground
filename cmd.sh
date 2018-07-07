@@ -1,5 +1,7 @@
 #!/bin/bash
- 
+
+PWD=`pwd`
+
 if [ "$1" = "" ]; then
   echo "./cmd.sh (up|down|exec)"
 

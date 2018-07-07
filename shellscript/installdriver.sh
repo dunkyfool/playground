@@ -11,4 +11,4 @@ echo "Execute script ..."
 sh installodbc.sh
 
 echo "PIP install pyodbc & pymssql"
-pip install pyodbc pymssql
+pip install pyodbc pymssql ipython
