@@ -1,0 +1,19 @@
+version: '2'
+services:
+  redis:
+    image: 'redis:latest'
+    hostname: 'REDIS'
+    ports:
+      - '6379:6379'
+  shell:
+    image: 'python:2.7.15'
+    hostname: 'PYSHELL'
+    command: 'sleep infinity'
+  mssql:
+    image: 'microsoft/mssql-server-linux:2017-latest'
+    hostname: 'MSSQL'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=!qaz2wsX
+    ports:
+      - '1433:1433'
